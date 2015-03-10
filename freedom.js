@@ -1,0 +1,1 @@
+../freedomjs.github.io/dist/freedom/latest/freedom.js
