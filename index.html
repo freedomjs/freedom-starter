@@ -2,32 +2,14 @@
 <html lang="en-US">
   <head>
     <title>Counter ~ freedom.js Demos</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
     <link href='static/style.css' rel='stylesheet' type='text/css' />
+    <link href='static/freedomjs-icon.png' rel='icon' type='image/png' />
 
     <!-- Load freedom.js -->
-    <script type="text/javascript" src="../../freedom.js"></script>
-
-    <script type="text/javascript">
-      // After loading freedom.js, the window is populated with a 'freedom'
-      // object, which is used as a message passing channel to the root module
-      var start = function(Counter) {
-        var counter = new Counter(0);
-
-        //Send click events to the module.
-        document.getElementById('click').onclick = function() {
-          counter.click(1).then(function (sum) {
-            document.getElementById('count').innerHTML = sum;
-          });
-        }
-      };
-
-      window.onload = function() {
-        freedom("manifest.json", {
-          "debug": "log"
-        }).then(start);
-      };
-    </script>
+    <script type='text/javascript' src='freedom.js'></script>
+    <!-- Load "browser-side" (interacts w/DOM) JavaScript -->
+    <script type='text/javascript' src='page.js'></script>
   </head>
   <body>
     <header id='logo'>freedom.js</header>
