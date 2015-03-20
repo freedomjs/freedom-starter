@@ -12,7 +12,7 @@ var start = function(Counter) {
     counter.click(1).then(function (sum) {
       document.getElementById('count').innerHTML = sum;
     });
-  }
+  };
 };
 
 window.onload = function() {
