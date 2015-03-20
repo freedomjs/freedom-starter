@@ -6,19 +6,19 @@
  **/
 
 var start = function(Counter) {
-    var counter = new Counter(0);
-    //Send click events to the module.
-    document.getElementById('click').onclick = function() {
-        counter.click(1).then(function (sum) {
-            document.getElementById('count').innerHTML = sum;
-        });
-    }
+  var counter = new Counter(0);
+  //Send click events to the module.
+  document.getElementById('click').onclick = function() {
+    counter.click(1).then(function (sum) {
+      document.getElementById('count').innerHTML = sum;
+    });
+  }
 };
 
 window.onload = function() {
-    // After loading freedom.js, the window is populated with a 'freedom'
-    // object, which is used as a message passing channel to the root module
-    freedom("freedom-module.json", {
-        "debug": "log"
-    }).then(start);
+  // After loading freedom.js, the window is populated with a 'freedom'
+  // object, which is used as a message passing channel to the root module
+  freedom('freedom-module.json', {
+    'debug': 'log'
+  }).then(start);
 };
